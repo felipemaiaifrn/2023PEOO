@@ -1,8 +1,8 @@
 # The command that runs the program. If the interpreter field is set, it will have priority and this run command will do nothing
-run = "python3 './listPOO01/ex02.py'"
+run = "python3 './listPOO02/q1.py'"
 # The primary language of the repl. There can be others, though!
 language = "python3"
-entrypoint = "./listaPOO01/ex02.py"
+entrypoint = "./listaPOO02/q1.py"
 # A list of globs that specify which files and directories should
 # be hidden in the workspace.
 hidden = ["venv", ".config", "**/__pycache__", "**/.mypy_cache", "**/*.pyc"]
