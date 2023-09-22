@@ -104,7 +104,8 @@ class UI:
   @classmethod
   def MedInserir(cls):
     descricao = input("Descrição: ")
-    valor = input("Valor: ")
+    valor_str = input("Valor: ")
+    valor = float(valor_str)
     data_str = input("Vencimento: ")
     data = datetime.datetime.strptime(data_str, '%d/%m/%Y')
     med = Medicamento(0, descricao, valor, data)
