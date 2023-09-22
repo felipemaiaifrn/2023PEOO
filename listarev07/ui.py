@@ -34,10 +34,12 @@ class UI:
     fone = input("fone: ")
     cliente = Cliente(0, nome, email, fone)
     NCliente.inserir(cliente)
+    
   @classmethod
   def ClienteListar(cls):
     for cliente in NCliente.listar():
       print(cliente)
+      
   @classmethod
   def ClienteAtualizar(cls):
     UI.ClienteListar()
@@ -46,14 +48,14 @@ class UI:
     email = input("Novo e-mail: ")
     fone = input("Novo fone: ")
     cliente = Cliente(id, nome, email, fone)
-    NCliente.atualizar(cliente)    
+    NCliente.atualizar(cliente)   
+    
   @classmethod
   def ClienteExcluir(cls):
     UI.ClienteListar()
     id = int(input("Id do cliente a ser excluído: "))
     cliente = Cliente(id, "", "", "")
     NCliente.excluir(cliente)
-
 
   @classmethod
   def ServicoInserir(cls):
@@ -63,10 +65,12 @@ class UI:
     duracao = input("Duração (min): ")
     servico = Servico(0, desc, valor, duracao)
     NServico.inserir(servico)
+    
   @classmethod
   def ServicoListar(cls):
     for servico in NServico.listar():
       print(servico)
+      
   @classmethod
   def ServicoAtualizar(cls):
     UI.ServicoListar()
@@ -75,7 +79,8 @@ class UI:
     valor = input("Novo Valor (R$): ")
     duracao = input("Nova Duração (min): ")
     servico = Servico(id, desc, valor, duracao)
-    NServico.atualizar(servico)    
+    NServico.atualizar(servico)  
+    
   @classmethod
   def ServicoExcluir(cls):
     UI.ServicoListar()
